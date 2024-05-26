@@ -28,13 +28,8 @@
         </div>
         <div class="col-md-6 my-auto" data-aos-duration="1500" data-aos="fade-left">
             <h1 class="title mt-3">Apa itu CodeChamp</h1>
-<<<<<<< HEAD
             <p class="text-section"><span style="font-size: 18px; color: #7743DB;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
             <a href="<?= base_url('auth/registrasi') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
-=======
-            <p class="text-section"><span style="font-size: 18px; color: #5548ed;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
-            <a href="<?= base_url('Auth/registrasi') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
->>>>>>> 1e27db3457c3efa2cef734bd9e48fe5122d7a986
         </div>
     </div>
 </div>
