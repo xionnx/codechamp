@@ -29,7 +29,7 @@
         <div class="col-md-6 my-auto" data-aos-duration="1500" data-aos="fade-left">
             <h1 class="title mt-3">Apa itu CodeChamp</h1>
             <p class="text-section"><span style="font-size: 18px; color: #7743DB;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
-            <a href="<?= base_url('auth/registrasi') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
+            <a href="<?= base_url('auth/register') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
         </div>
     </div>
 </div>
