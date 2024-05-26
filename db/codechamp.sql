@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2024 at 08:42 AM
+-- Generation Time: May 26, 2024 at 12:49 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.3.33
 
@@ -20,26 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `codechamp`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `nama_user` varchar(25) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `nama_user`, `username`, `password`) VALUES
-(1, 'admin', 'admin', '1234');
 
 -- --------------------------------------------------------
 
@@ -94,14 +74,6 @@ CREATE TABLE `peserta` (
   `skor` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `peserta`
---
-
-INSERT INTO `peserta` (`id_peserta`, `id_materi`, `id_user`, `status_kursus`, `status_kursus_kursus`, `benar`, `salah`, `skor`) VALUES
-(1, 1, 1, 1, 0, '', '', ''),
-(2, 1, 2, 1, 0, '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -136,53 +108,30 @@ INSERT INTO `soal_materi` (`id_soal_materi`, `id_materi`, `pertanyaan`, `a`, `b`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tutor`
---
-
-CREATE TABLE `tutor` (
-  `id_tutor` int(11) NOT NULL,
-  `nama_tutor` varchar(50) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `tutor`
---
-
-INSERT INTO `tutor` (`id_tutor`, `nama_tutor`, `username`, `password`) VALUES
-(1, 'Tutor', 'tutor', '1234');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `nama_user` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(225) NOT NULL
+  `password` varchar(225) NOT NULL,
+  `role` int(1) NOT NULL COMMENT '1. Admin, 2. Tutor, 3. User'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama_user`, `username`, `password`) VALUES
-(1, 'Daffy', 'dapi', '1234'),
-(2, 'Madit', 'madit', '1234');
+INSERT INTO `user` (`id_user`, `email`, `nama_user`, `password`, `role`) VALUES
+(1, 'admin@gmail.com', 'Admin Kel 13', '81dc9bdb52d04dc20036dbd8313ed055', 1),
+(2, 'tutor@gmail.com', 'Tutor Kel 13', '81dc9bdb52d04dc20036dbd8313ed055', 2),
+(3, 'd@gmail.com', 'Muhamad Khadaffy', '81dc9bdb52d04dc20036dbd8313ed055', 3),
+(4, 'm@gmail.com', 'Muhammad Aditya', '81dc9bdb52d04dc20036dbd8313ed055', 3);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `jawaban`
@@ -214,12 +163,6 @@ ALTER TABLE `soal_materi`
   ADD KEY `id_matakuliah` (`id_materi`);
 
 --
--- Indexes for table `tutor`
---
-ALTER TABLE `tutor`
-  ADD PRIMARY KEY (`id_tutor`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -228,12 +171,6 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jawaban`
@@ -251,7 +188,7 @@ ALTER TABLE `materi`
 -- AUTO_INCREMENT for table `peserta`
 --
 ALTER TABLE `peserta`
-  MODIFY `id_peserta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_peserta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `soal_materi`
@@ -260,16 +197,10 @@ ALTER TABLE `soal_materi`
   MODIFY `id_soal_materi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `tutor`
---
-ALTER TABLE `tutor`
-  MODIFY `id_tutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
