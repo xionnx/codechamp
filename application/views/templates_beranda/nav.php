@@ -44,13 +44,7 @@
                         <a class="nav-link" href="<?= base_url('beranda') ?>">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">I</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#tentang">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">I</a>
                     </li>
                     <li class="nav-item">
                         <a class="cta text-decoration-none" href="<?= base_url('auth/login'); ?>">
@@ -59,9 +53,6 @@
                             </span>
                         </a>
                     <li>
-                    <li class="nav-item">
-                        <a class="nav-link">I</a>
-                    </li>
                     <li class="nav-item">
                         <a class="cta text-decoration-none" href="<?= base_url('auth/register') ?>">
                             <span class="my-auto">
