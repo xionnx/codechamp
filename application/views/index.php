@@ -4,9 +4,9 @@
         <p class="lead text-jumbotron" data-aos="fade-right" data-aos-duration="1700">Selamat Datang di</p>
         <h1 class="display-3 header-jumbotron"  data-aos="fade-right" data-aos-duration="1500">CodeChamp
         </h1>
-        <p class="lead text-jumbotron" data-aos="fWde-right" data-aos-duration="1700">Layanan Kursus Online Berbahasa Indonesia</p>
-        <a href="https://github.com/siubsi" target="_blank" title="Kunjungi GitHub SIUBSI"><i class="lni lni-github-original lni-custom-style" data-aos="fade-right" data-aos-duration="1700"></i></a>
-        <a href="<?= base_url('#materikursus'); ?>" title="Lihat Pembuat Forum"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
+        <p class="lead text-jumbotron" data-aos="fWde-right" data-aos-duration="1700">Layanan Kursus Online Berbahasa Indonesia yang berfokuskan pada materi Web Development.</p>
+        <a href="https://github.com/xionnx/codechamp" target="_blank" title="Kunjungi Source Code"><i class="lni lni-github-original lni-custom-style" data-aos="fade-right" data-aos-duration="1700"></i></a>
+        <a href="<?= base_url('#materikursus'); ?>" title="Lihat Daftar Materi Tersedia"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
     </div>
 </div>
 <!-- end jumbotron -->
@@ -52,7 +52,7 @@
                 <div class="card-body">
                     <i class="fa fa-book fa-custom-style"></i>
                     <h4 class="card-title mt-0">Terdapat Informasi Materi</h4>
-                    <small class="text-light">Pengguna disediakan informasi mengenai banyak materi web development, seperti misalnya HTML, CSS, Javascript, dan lain-lain.</small>
+                    <small class="text-light">Pengguna disediakan informasi mengenai banyak materi Web Development, seperti misalnya bahasa pemrograman seperti Javascript, PHP. Hypertext Language seperti HTML, hingga framework seperti Bootstrap, Codeigniter, dan sebagainya.</small>
             </div>
             <div class="card-footer">
               <div class="media">
@@ -71,8 +71,8 @@
           <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
               <i class="fa fa-pen-square fa-custom-style"></i>
-              <h4 class="card-title mt-0">Terdapat Fitur Quiz</h4>
-              <small class="text-light">Pengguna dapat mengerjakan quiz dari materi diinginkan, dan pengguna dapat melihat hasil quiz dari materi yang diinginkannya.</small>
+              <h4 class="card-title mt-0">Terdapat Fitur Mengerjakan Materi</h4>
+              <small class="text-light">Pengguna dapat mengerjakan materi kursus yang diinginkan, dan pengguna dapat melihat hasil pengerjaannya kapanpun.</small>
             </div>
             <div class="card-footer">
               <div class="media">
@@ -90,9 +90,9 @@
         <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
           <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
-              <i class="fa fa-user fa-custom-style"></i>
-              <h4 class="card-title mt-0">Dapat Mengubah Informasi Pribadi</h4>
-              <small class="text-light">Pengguna dapat mengubah - ubah informasi pribadi pengguna.</small>
+              <i class="fa fa-newspaper fa-custom-style"></i>
+              <h4 class="card-title mt-0">Terdapat Fitur Berita</h4>
+              <small class="text-light">Pengguna akan diperlihatkan berita - berita yang tentunya mengenai Web Development!</small>
             </div>
             <div class="card-footer">
               <div class="media">

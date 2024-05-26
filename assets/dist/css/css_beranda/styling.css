@@ -330,11 +330,17 @@ footer {
 	font-family: "Nunito";
 	font-size: 20px;
 	color: white;
-	/* background: rgb(141, 0, 19); */
-	background: rgba(80, 29, 175);
+	/*background: rgb(141, 0, 19);
+	*/ /*background: rgba(80, 29, 175);
+	*/
+	border: 2px solid #fff;
 	transition: 1s;
-	box-shadow: 6px 6px 0 rgba(80, 29, 175, 0.589);
-	transform: skewX(-15deg);
+	box-shadow: 1px 1px 0 rgba(80, 29, 175, 0.589);
+	transform: skewX(-5deg);
+	-webkit-transform: skewX(-5deg);
+	-moz-transform: skewX(-5deg);
+	-ms-transform: skewX(-5deg);
+	-o-transform: skewX(-5deg);
 }
 
 .cta:focus {
