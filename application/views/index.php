@@ -80,74 +80,67 @@
     <div class="row mt-3">
       <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
         <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
-          <<<<<<< HEAD <div class="card-img-overlay d-flex flex-column">
+          <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
               <i class="fa fa-book fa-custom-style"></i>
               <h4 class="card-title mt-0">Terdapat Informasi Materi</h4>
-              <small class="text-light">Pengguna disediakan informasi mengenai banyak materi web development, seperti misalnya HTML, CSS, Javascript, dan lain-lain.</small>
-              =======
-              <div class="card-img-overlay d-flex flex-column">
-                <div class="card-body">
-                  <i class="fa fa-book fa-custom-style"></i>
-                  <h4 class="card-title mt-0">Terdapat Informasi Materi</h4>
-                  <small class="text-light">Pengguna disediakan informasi mengenai banyak materi Web Development, seperti misalnya bahasa pemrograman seperti Javascript, PHP. Hypertext Language seperti HTML, hingga framework seperti Bootstrap, Codeigniter, dan sebagainya.</small>
-                  >>>>>>> e881bb77b11855346ab449049884f8c2a5db343a
-                </div>
-                <div class="card-footer">
-                  <div class="media">
-                    <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
-                    <div class="media-body">
-                      <h6 class="my-0 text-light d-block">CodeChamp</h6>
-                      <small class="text-light">Layanan Kursus Online</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <small class="text-light">Pengguna disediakan informasi mengenai banyak materi Web Development, seperti misalnya bahasa pemrograman seperti Javascript, PHP. Hypertext Language seperti HTML, hingga framework seperti Bootstrap, Codeigniter, dan sebagainya.</small>
             </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-          <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
-            <div class="card-img-overlay d-flex flex-column">
-              <div class="card-body">
-                <i class="fa fa-pen-square fa-custom-style"></i>
-                <h4 class="card-title mt-0">Terdapat Fitur Mengerjakan Materi</h4>
-                <small class="text-light">Pengguna dapat mengerjakan materi kursus yang diinginkan, dan pengguna dapat melihat hasil pengerjaannya kapanpun.</small>
-              </div>
-              <div class="card-footer">
-                <div class="media">
-                  <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
-                  <div class="media-body">
-                    <h6 class="my-0 text-light d-block">CodeChamp</h6>
-                    <small class="text-light">Layanan Kursus Online</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-          <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
-            <div class="card-img-overlay d-flex flex-column">
-              <div class="card-body">
-                <i class="fa fa-newspaper fa-custom-style"></i>
-                <h4 class="card-title mt-0">Terdapat Fitur Berita</h4>
-                <small class="text-light">Pengguna akan diperlihatkan berita - berita yang tentunya mengenai Web Development!</small>
-              </div>
-              <div class="card-footer">
-                <div class="media">
-                  <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
-                  <div class="media-body">
-                    <h6 class="my-0 text-light d-block">CodeChamp</h6>
-                    <small class="text-light">Layanan Kursus Online</small>
-                  </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
+                <div class="media-body">
+                  <h6 class="my-0 text-light d-block">CodeChamp</h6>
+                  <small class="text-light">Layanan Kursus Online</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+        <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <i class="fa fa-pen-square fa-custom-style"></i>
+              <h4 class="card-title mt-0">Terdapat Fitur Mengerjakan Materi</h4>
+              <small class="text-light">Pengguna dapat mengerjakan materi kursus yang diinginkan, dan pengguna dapat melihat hasil pengerjaannya kapanpun.</small>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
+                <div class="media-body">
+                  <h6 class="my-0 text-light d-block">CodeChamp</h6>
+                  <small class="text-light">Layanan Kursus Online</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+        <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <i class="fa fa-newspaper fa-custom-style"></i>
+              <h4 class="card-title mt-0">Terdapat Fitur Berita</h4>
+              <small class="text-light">Pengguna akan diperlihatkan berita - berita yang tentunya mengenai Web Development!</small>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
+                <div class="media-body">
+                  <h6 class="my-0 text-light d-block">CodeChamp</h6>
+                  <small class="text-light">Layanan Kursus Online</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+  </div>
 </section>
 
 </div>
