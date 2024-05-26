@@ -15,7 +15,7 @@
 
 <!-- title -->
 <div class="row" id="materikursus">
-  <div class="col-md-10 container mt-5">
+  <div class="col-md-10 container mt-5"><br><br>
     <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Materi Kursus Tersedia</h2>
   </div>
 </div>
@@ -46,7 +46,7 @@
 
 <!-- title -->
 <div class="row" id="tentang">
-  <div class="col-md-10 container mt-5">
+  <div class="col-md-10 container mt-5"><br><br>
     <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Mengenai CodeChamp</h2>
   </div>
 </div>
