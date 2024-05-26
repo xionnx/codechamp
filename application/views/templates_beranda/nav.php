@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <script src="https://kit.fontawesome.com/57635d64f6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?=base_url('assets/');?>dist/css/css_beranda/styling.css">
@@ -20,6 +19,9 @@
     <!-- <link rel="stylesheet" href="<?=base_url('assets/')?>sweetalert/package/dist/sweetalert2.min.css"> -->
     <link href=" https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <!-- Font Awesome 6 Kit -->
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 
 
 
@@ -44,13 +46,13 @@
                         <a class="nav-link" href="<?=base_url('beranda')?>">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a clas="nav-link">//</a>
+                        <a class="nav-link">//</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#tentang">Tentang</a>
                     </li>
                     <li class="nav-item">
-                        <a clas="nav-link">//</a>
+                        <a class="nav-link">//</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('auth/login'); ?>" aria-haspopup="true" aria-expanded="false">
@@ -58,7 +60,7 @@
                         </a>
                     <li>
                         <li class="nav-item">
-                        <a clas="nav-link">//</a>
+                        <a class="nav-link">//</a>
                     </li>
                     <li class="nav-item">
                         <a class="cta text-decoration-none" href="<?=base_url('auth/registrasi')?>">

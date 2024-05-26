@@ -6,7 +6,7 @@
         </h1>
         <p class="lead text-jumbotron" data-aos="fWde-right" data-aos-duration="1700">Layanan Kursus Online Berbahasa Indonesia</p>
         <a href="https://github.com/siubsi" target="_blank" title="Kunjungi GitHub SIUBSI"><i class="lni lni-github-original lni-custom-style" data-aos="fade-right" data-aos-duration="1700"></i></a>
-        <a href="<?= base_url('#creatorr'); ?>" title="Lihat Pembuat Forum"><i class="lni lni-code lni-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
+        <a href="<?= base_url('#creatorr'); ?>" title="Lihat Pembuat Forum"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
     </div>
 </div>
 <!-- end jumbotron -->
@@ -28,8 +28,13 @@
         </div>
         <div class="col-md-6 my-auto" data-aos-duration="1500" data-aos="fade-left">
             <h1 class="title mt-3">Apa itu CodeChamp</h1>
+<<<<<<< HEAD
             <p class="text-section"><span style="font-size: 18px; color: #7743DB;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
             <a href="<?= base_url('auth/registrasi') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
+=======
+            <p class="text-section"><span style="font-size: 18px; color: #5548ed;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
+            <a href="<?= base_url('Auth/registrasi') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
+>>>>>>> 1e27db3457c3efa2cef734bd9e48fe5122d7a986
         </div>
     </div>
 </div>
@@ -38,7 +43,7 @@
 <!-- title -->
 <div class="row" id="daftarfitur">
     <div class="col-md-10 container mt-5">
-        <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Yang bisa didapatkan dari CodeChamp</h2>
+        <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Apa saja yang bisa dilakukan di CodeChamp</h2>
     </div>
 </div>
 <br>    
@@ -50,9 +55,9 @@
         <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
             <div class="card-img-overlay d-flex flex-column">
                 <div class="card-body">
-                    <i class="lni lni-game lni-custom-style"></i>
-                    <h4 class="card-title mt-0">Terdapat Informasi Game</h4>
-                    <small class="text-light">Pengguna disediakan informasi mengenai banyak game, seperti misalnya Kategori, Developer, Harga, Tanggal rilis dari game tersebut.</small>
+                    <i class="fa fa-book fa-custom-style"></i>
+                    <h4 class="card-title mt-0">Terdapat Informasi Materi</h4>
+                    <small class="text-light">Pengguna disediakan informasi mengenai banyak materi web development, seperti misalnya HTML, CSS, Javascript, dan lain-lain.</small>
             </div>
             <div class="card-footer">
               <div class="media">
@@ -70,9 +75,9 @@
         <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
           <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
-              <i class="lni lni-folder lni-custom-style"></i>
-              <h4 class="card-title mt-0">Terdapat Fitur Wishlist</h4>
-              <small class="text-light">Pengguna dapat menyimpan suatu game yang diinginkan, dan pengguna dapat melihat daftar game yang diinginkannya.</small>
+              <i class="fa fa-pen-square fa-custom-style"></i>
+              <h4 class="card-title mt-0">Terdapat Fitur Quiz</h4>
+              <small class="text-light">Pengguna dapat mengerjakan quiz dari materi diinginkan, dan pengguna dapat melihat hasil quiz dari materi yang diinginkannya.</small>
             </div>
             <div class="card-footer">
               <div class="media">
@@ -90,7 +95,7 @@
         <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
           <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
-              <i class="lni lni-pencil lni-custom-style"></i>
+              <i class="fa fa-user fa-custom-style"></i>
               <h4 class="card-title mt-0">Dapat Mengubah Informasi Pribadi</h4>
               <small class="text-light">Pengguna dapat mengubah - ubah informasi pribadi pengguna.</small>
             </div>
@@ -124,22 +129,22 @@
 <div class="row">
     <div class="owl-carousel mt-3 container owl-theme">
         <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/informasi_game.png);"></div>
+            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/html.png);"></div>
         </div>
         <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/interaksi_pengguna.png);"></div>
+            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/css.png);"></div>
         </div>
         <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/informasi_game.png);"></div>
+            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/javascript.png);"></div>
         </div>
         <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/interaksi_pengguna.png);"></div>
+            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/git.png);"></div>
         </div>
         <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/informasi_game.png);"></div>
+            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/php.png);"></div>
         </div>
         <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/interaksi_pengguna.png);"></div>
+            <div class="b-game-card__cover" style="background-image: url(assets/dist/img/bootstrap.png);"></div>
         </div>
     </div>
 </div>

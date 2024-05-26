@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: "Nunito";
 	width: 100%;
 }
 
@@ -40,7 +40,7 @@ nav {
 }
 
 .nav-colour {
-	background-color: #7743db;
+	background-color: #352c96;
 }
 
 .carousel {
@@ -49,7 +49,7 @@ nav {
 
 .active a {
 	background-color: white;
-	color: #7743db !important;
+	color: #5548ed !important;
 	border-radius: 30px;
 	padding-left: 20px !important;
 	padding-right: 20px !important;
@@ -65,9 +65,9 @@ nav {
 }
 
 .index-jumbotron {
-	background-image: url(../../img/jumbotron-img.png);
-	/* background-color: #7743DB; */
-	/* object-fit: cover; */
+	/* background-image: url(../../img/jumbotron-img.png); */
+	background-color: #5548ed;
+	object-fit: cover;
 	background-size: cover;
 	height: 35em;
 }
@@ -85,7 +85,7 @@ nav {
 .btn-colour {
 	font-weight: 600;
 	font-size: 20px;
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 	width: 30%;
 	border-radius: 55px;
@@ -94,7 +94,7 @@ nav {
 .btn-modal {
 	font-weight: 600;
 	font-size: 20px;
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 	transition: 0.2s linear;
 }
@@ -107,7 +107,7 @@ nav {
 .btn-section {
 	font-weight: 600;
 	font-size: 20px;
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 	border-radius: 30px;
 }
@@ -116,14 +116,14 @@ nav {
 	font-weight: 600;
 	font-size: 20px;
 	background-color: white;
-	color: #7743db;
-	border: 2px solid #7743db;
+	color: #5548ed;
+	border: 2px solid #5548ed;
 	border-radius: 15px;
 	transition: 0.2s linear;
 }
 
 .btn-daftar:hover {
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 }
 
@@ -281,7 +281,7 @@ nav {
 }
 
 .topup {
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 }
 
@@ -299,7 +299,7 @@ nav {
 }
 
 .end-section {
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 	padding: 20px;
 	border-radius: 5px;
@@ -308,7 +308,7 @@ nav {
 
 footer {
 	color: white;
-	background-color: #7743db;
+	background-color: #5548ed;
 	font-size: 20px;
 	text-decoration: none;
 }
@@ -327,7 +327,7 @@ footer {
 	display: flex;
 	padding: 1px 20px;
 	text-decoration: none;
-	font-family: "Poppins", sans-serif;
+	font-family: "Nunito";
 	font-size: 20px;
 	color: white;
 	/* background: rgb(141, 0, 19); */
@@ -477,17 +477,17 @@ path.two {
 
 /* Customization */
 .nav-link-edited {
-	background-color: #7743db;
+	background-color: #5548ed;
 	color: white;
 }
 
 .nav-link-edited:hover {
 	background-color: white;
-	color: #7743db;
+	color: #5548ed;
 }
 
 .img-custom-effect {
-	border: 2px solid #7743db;
+	border: 2px solid #5548ed;
 	border-radius: 20px;
 	box-shadow: 6px 6px 0 rgba(80, 29, 175, 0.589);
 }
@@ -503,7 +503,26 @@ i.lni-custom-style {
 }
 
 i.lni-custom-style:hover {
-	color: #7743db;
-	border: 1px solid #7743db;
+	color: #5548ed;
+	border: 1px solid #5548ed;
+	background-color: white;
+}
+
+i.fa-custom-style {
+	color: white;
+	font-size: 35px;
+	margin-bottom: 5px;
+	border: 1px solid white;
+	border-radius: 20px;
+	padding: 8px;
+	transition: 0.2s linear;
+	display: inline-block;
+	line-height: 1;
+	vertical-align: 3px; /* Sesuaikan nilai ini */
+}
+
+i.fa-custom-style:hover {
+	color: #5548ed;
+	border: 1px solid #5548ed;
 	background-color: white;
 }
