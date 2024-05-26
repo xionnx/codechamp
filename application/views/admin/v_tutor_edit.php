@@ -23,32 +23,25 @@ $this->load->view('admin/sidebar');
             <!-- form start -->
             <form action="<?=base_url('tutor/update');?>" method="post" class="form-horizontal">
               <div class="box-body">
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">ID Tutor</label>
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control" name="id_tutor" value="<?= $a->id_tutor;?>" disabled required>
-                  </div>
-                </div>
-
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Tutor</label>
+                  <input type="hidden" name="id" value="<?= $a->id_user;?>">
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nama" value="<?= $a->nama_tutor;?>" required>
+                    <input type="text" class="form-control" name="nama" value="<?= $a->nama_user;?>">
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="email" value="<?= $a->email;?>" required>
+                    <input type="text" class="form-control" name="email" value="<?= $a->email;?>">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" name="password" value="<?= $a->password;?>" required>
+                    <input type="password" class="form-control" name="password" value="<?= $a->password;?>">
                   </div>
                 </div>
 
@@ -56,7 +49,7 @@ $this->load->view('admin/sidebar');
                 <label class="col-sm-2 control-label"></label>
                 <div class="col-sm-10">
                   <a href="<?=base_url('tutor')?>" class="btn btn-default btn-flat"><span class="fa fa-arrow-left"></span> Batal</a>
-                  <button type="submit" class="btn btn-primary btn-flat" title="Simpan Data Pengawas"><span class="fa fa-save"></span> Simpan</button>
+                  <button type="submit" class="btn btn-primary btn-flat" title="Simpan Data Tutor"><span class="fa fa-save"></span> Simpan</button>
                 </div>
               </div>
 

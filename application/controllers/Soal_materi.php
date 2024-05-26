@@ -60,7 +60,7 @@ class soal_materi extends CI_Controller {
 		$this->m_data->update_data($where, $data, 'soal_materi');
 		$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-check"></i> Selamat, Soal telah berhasil diupdate!</h4></div>');
 		redirect(base_url('soal_materi'));
-	}	
+	}
 
 	public function hapus($id) 
 	{

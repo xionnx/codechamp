@@ -44,13 +44,13 @@ $this->load->view('admin/sidebar');
               foreach ($tutor as $m) { ?>
                 <tr>
                   <td><?php echo $no++; ?></td>
-                  <td><?php echo $m->id_tutor; ?></td>
-                  <td><?php echo $m->nama_tutor; ?></td>
+                  <td><?php echo $m->id_user; ?></td>
+                  <td><?php echo $m->nama_user; ?></td>
                   <td><?php echo $m->email; ?></td>
                   <td>
-                    <a href="<?= base_url('tutor/edit/') . $m->id_tutor; ?>" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-edit" title="Ubah Data"></span></a> |
-                    <a href="<?= base_url('tutor/hapus/') . $m->id_tutor; ?>" class="btn btn-xs btn-danger">
-                        <span class="glyphicon glyphicon-trash" onclick="return confirm('Apakah yakin ingin menghapus tutor dengan nama <?= $m->nama_tutor; ?>?')"></span>
+                    <a href="<?= base_url('tutor/edit/') . $m->id_user; ?>" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-edit" title="Ubah Data"></span></a> |
+                    <a href="<?= base_url('tutor/hapus/') . $m->id_user; ?>" class="btn btn-xs btn-danger">
+                        <span class="glyphicon glyphicon-trash" onclick="return confirm('Apakah yakin ingin menghapus tutor dengan nama <?= $m->nama_user; ?>?')"></span>
                     </a>
                   </td>
                 </tr>

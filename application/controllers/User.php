@@ -56,20 +56,20 @@ class user extends CI_Controller
 	{
 		$id 		= $this->input->post('id');
 		$nama 		= $this->input->post('nama');
-		$email	= $this->input->post('email');
-		$password	= $this->input->post('password');
+		$email		= $this->input->post('email');
+		$password	= md5($this->input->post('password'));
 
 		$where = array('id_user' => $id);
 
 		if ($password == "") {
 			$data = array(
 				'nama_user' => $nama,
-				'email' => $email
+				'email' 	=> $email
 			);
 			$this->m_data->update_data($where, $data, 'user');
 		} else {
 			$data = array(
-				'nama_user' => $nama,
+				'nama_user'  => $nama,
 				'email' 	 => $email,
 				'password' 	 => $password,
 			);

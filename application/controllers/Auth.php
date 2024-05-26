@@ -127,7 +127,7 @@ class Auth extends CI_Controller
                 $nama_user           = $this->input->post('nama_user');
                 $email               = $this->input->post('email');
                 $password            = md5($this->input->post('password'));
-                $role               = 3;
+                $role                = 3;
         
                 $data = array(
                     'nama_user' => $nama_user,

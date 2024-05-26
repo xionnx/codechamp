@@ -46,8 +46,8 @@
 
 <!-- title -->
 <div class="row" id="tentang">
-  <div class="col-md-10 container mt-5">
-    <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Mengenai CodeChamp</h2>
+  <div class="col-md-10 container">
+    <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500" style="margin-top: 200px;">Mengenai CodeChamp</h2>
   </div>
 </div>
 <br>
@@ -68,7 +68,7 @@
 </section>
 
 <!-- title -->
-<div class="row" id="daftarfitur">
+<div class="row" id="daftarfitur" style="margin-top: 200px;">
   <div class="col-md-10 container mt-5">
     <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Apa saja yang bisa dilakukan di CodeChamp</h2>
   </div>

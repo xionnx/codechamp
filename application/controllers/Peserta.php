@@ -70,7 +70,6 @@ class peserta extends CI_Controller
 		$where = array('id_peserta' => $id);
 
 		if ($peserta == '' || $materi == '') {
-			
 			$this->session->set_flashdata('message', '<div class="alert alert-danger alert-message"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-check"></i> semua field harus diisi semua !</h4></div>');
 			redirect(base_url('peserta'));
 		} else {

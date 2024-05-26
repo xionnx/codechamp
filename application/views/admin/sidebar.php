@@ -69,9 +69,17 @@
           <li class="treeview <?= $this->uri->segment(1) == 'soal' || $this->uri->segment(1) == 'soal_materi' ? 'active' : '' ?>">
 
           <li <?= $this->uri->segment(1) == 'soal_materi' ? 'class="active"' : '' ?>>
-            <a href="<?php echo base_url('soal_materi'); ?>"><i class="fa fa-circle-o"></i> Kelola Soal Materi</a>
+            <a href="<?php echo base_url('soal_materi'); ?>"><i class="fa fa-circle-o"></i>
+              <span>Kelola Soal Materi</span>
+            </a>
           </li>
 
+          </li>
+
+          <li <?= $this->uri->segment(1) == 'artikel' ? 'class="active"' : '' ?>>
+          <a href="<?php echo base_url('artikel/kelola'); ?>"><i class="fa fa-circle-o"></i>
+            <span>Kelola Artikel</span>
+          </a>
           </li>
 
         <?php } ?>

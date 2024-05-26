@@ -11,6 +11,18 @@ class M_data extends CI_Model
 		return $this->db->get($table);
 	}
 
+	public function get_join_artikels()
+	{
+		$query = 'SELECT * FROM artikel join materi ON artikel.id_materi=materi.id_materi join user ON artikel.id_user=user.id_user';
+		return $this->db->query($query);
+	}
+
+	public function get_join_artikel($id)
+	{
+		$query = 'SELECT * FROM artikel join materi ON artikel.id_materi=materi.id_materi join user ON artikel.id_user=user.id_user WHERE artikel.id_artikel="'.$id.'"';
+		return $this->db->query($query);
+	}
+
 	// fungsi login
 	public function login($post)
     {
@@ -18,6 +30,15 @@ class M_data extends CI_Model
         $this->db->from('user');
         $this->db->where('email', $post['email']);
         $this->db->where('password', md5($post['password']));
+        $query = $this->db->get();
+        return $query;
+    }
+
+	public function get_tutor()
+    {
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->where('role', 2);
         $query = $this->db->get();
         return $query;
     }
@@ -82,6 +103,12 @@ class M_data extends CI_Model
 	{
 		// $query = 'SELECT * FROM user join kelas ON user.id_kelas=kelas.id_kelas WHERE user.id_user="' . $id . '"';
 		$query = 'SELECT * FROM user WHERE user.id_user="' . $id . '"';
+		return $this->db->query($query);
+	}
+
+	public function get_joinuser_tutor($id)
+	{
+		$query = 'SELECT * FROM user WHERE user.role=2';
 		return $this->db->query($query);
 	}
 

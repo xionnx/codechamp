@@ -41,6 +41,12 @@
             <span>Hasil Pengerjaan Materi</span>
           </a>
         </li>
+        
+        <li <?= $this->uri->segment(1) == 'artikel' ? 'class="active"' : '' ?>>
+          <a href="<?php echo base_url('artikel'); ?>"><i class="fa fa-circle-o"></i>
+            <span>Artikel</span>
+          </a>
+          </li>
         <!-- Tutup Data Peserta Kursus -->
 
 
