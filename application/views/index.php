@@ -5,8 +5,8 @@
     </h1>
     <p class="lead text-jumbotron" data-aos="fade-right" data-aos-duration="1700">Layanan Kursus Online Berbahasa Indonesia</p>
     <div class="center-container">
-      <a href="https://github.com/siubsi" target="_blank" title="Kunjungi GitHub SIUBSI"><i class="lni lni-github-original lni-custom-style" data-aos="fade-right" data-aos-duration="1700"></i></a>
-      <a href="<?= base_url('#materikursus'); ?>" title="Lihat Pembuat Forum"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
+      <a href="https://github.com/xionnx/codechamp" target="_blank" title="Kunjungi GitHub CodeChamp"><i class="lni lni-github-original lni-custom-style" data-aos="fade-right" data-aos-duration="1700"></i></a>
+      <a href="<?= base_url('#materikursus'); ?>" title="Lihat Materi Kursus"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
     </div>
   </div>
 </div>
@@ -24,22 +24,22 @@
 <div class="row">
   <div class="owl-carousel mt-3 container owl-theme">
     <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-      <div class="b-game-card__cover" style="background-image: url(assets/dist/img/html.png);"></div>
+      <div class="b-game-card__cover" title="HTML" style="background-image: url(assets/dist/img/html.png);"></div>
     </div>
     <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-      <div class="b-game-card__cover" style="background-image: url(assets/dist/img/css.png);"></div>
+      <div class="b-game-card__cover" title="CSS" style="background-image: url(assets/dist/img/css.png);"></div>
     </div>
     <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-      <div class="b-game-card__cover" style="background-image: url(assets/dist/img/javascript.png);"></div>
+      <div class="b-game-card__cover" title="Javascript" style="background-image: url(assets/dist/img/javascript.png);"></div>
     </div>
     <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-      <div class="b-game-card__cover" style="background-image: url(assets/dist/img/git.png);"></div>
+      <div class="b-game-card__cover" title="Git" style="background-image: url(assets/dist/img/git.png);"></div>
     </div>
     <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-      <div class="b-game-card__cover" style="background-image: url(assets/dist/img/php.png);"></div>
+      <div class="b-game-card__cover" title="PHP" style="background-image: url(assets/dist/img/php.png);"></div>
     </div>
     <div class="b-game-card item" data-aos="fade-up" data-aos-duration="1200">
-      <div class="b-game-card__cover" style="background-image: url(assets/dist/img/bootstrap.png);"></div>
+      <div class="b-game-card__cover" title="Bootstrap" style="background-image: url(assets/dist/img/bootstrap.png);"></div>
     </div>
   </div>
 </div>
@@ -80,67 +80,74 @@
     <div class="row mt-3">
       <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
         <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
-          <div class="card-img-overlay d-flex flex-column">
+          <<<<<<< HEAD <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
               <i class="fa fa-book fa-custom-style"></i>
               <h4 class="card-title mt-0">Terdapat Informasi Materi</h4>
               <small class="text-light">Pengguna disediakan informasi mengenai banyak materi web development, seperti misalnya HTML, CSS, Javascript, dan lain-lain.</small>
+              =======
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="card-body">
+                  <i class="fa fa-book fa-custom-style"></i>
+                  <h4 class="card-title mt-0">Terdapat Informasi Materi</h4>
+                  <small class="text-light">Pengguna disediakan informasi mengenai banyak materi Web Development, seperti misalnya bahasa pemrograman seperti Javascript, PHP. Hypertext Language seperti HTML, hingga framework seperti Bootstrap, Codeigniter, dan sebagainya.</small>
+                  >>>>>>> e881bb77b11855346ab449049884f8c2a5db343a
+                </div>
+                <div class="card-footer">
+                  <div class="media">
+                    <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
+                    <div class="media-body">
+                      <h6 class="my-0 text-light d-block">CodeChamp</h6>
+                      <small class="text-light">Layanan Kursus Online</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="card-footer">
-              <div class="media">
-                <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
-                <div class="media-body">
-                  <h6 class="my-0 text-light d-block">CodeChamp</h6>
-                  <small class="text-light">Layanan Kursus Online</small>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+          <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <i class="fa fa-pen-square fa-custom-style"></i>
+                <h4 class="card-title mt-0">Terdapat Fitur Mengerjakan Materi</h4>
+                <small class="text-light">Pengguna dapat mengerjakan materi kursus yang diinginkan, dan pengguna dapat melihat hasil pengerjaannya kapanpun.</small>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
+                  <div class="media-body">
+                    <h6 class="my-0 text-light d-block">CodeChamp</h6>
+                    <small class="text-light">Layanan Kursus Online</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+          <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <i class="fa fa-newspaper fa-custom-style"></i>
+                <h4 class="card-title mt-0">Terdapat Fitur Berita</h4>
+                <small class="text-light">Pengguna akan diperlihatkan berita - berita yang tentunya mengenai Web Development!</small>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
+                  <div class="media-body">
+                    <h6 class="my-0 text-light d-block">CodeChamp</h6>
+                    <small class="text-light">Layanan Kursus Online</small>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-        <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <i class="fa fa-pen-square fa-custom-style"></i>
-              <h4 class="card-title mt-0">Terdapat Fitur Quiz</h4>
-              <small class="text-light">Pengguna dapat mengerjakan quiz dari materi diinginkan, dan pengguna dapat melihat hasil quiz dari materi yang diinginkannya.</small>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
-                <div class="media-body">
-                  <h6 class="my-0 text-light d-block">CodeChamp</h6>
-                  <small class="text-light">Layanan Kursus Online</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-        <div class="card text-light card-has-bg click-col" data-aos="fade-up" data-aos-duration="1500">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <i class="fa fa-user fa-custom-style"></i>
-              <h4 class="card-title mt-0">Dapat Mengubah Informasi Pribadi</h4>
-              <small class="text-light">Pengguna dapat mengubah - ubah informasi pribadi pengguna.</small>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img class="mr-3" src="<?= base_url('assets/') ?>dist/img/codechamplogo.png" width="40" alt="Codechamp Logo">
-                <div class="media-body">
-                  <h6 class="my-0 text-light d-block">CodeChamp</h6>
-                  <small class="text-light">Layanan Kursus Online</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-  </div>
+    </div>
 </section>
 
 </div>
