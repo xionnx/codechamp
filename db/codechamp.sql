@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2024 at 12:49 PM
+-- Generation Time: May 26, 2024 at 08:03 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.3.33
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `codechamp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel`
+--
+
+CREATE TABLE `artikel` (
+  `id_artikel` int(11) NOT NULL,
+  `gambar_artikel` varchar(128) NOT NULL,
+  `judul_artikel` varchar(128) NOT NULL,
+  `isi_artikel` text NOT NULL,
+  `id_materi` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `tanggal_unggah` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `artikel`
+--
+
+INSERT INTO `artikel` (`id_artikel`, `gambar_artikel`, `judul_artikel`, `isi_artikel`, `id_materi`, `id_user`, `tanggal_unggah`) VALUES
+(1, 'artikel_1716737279.jpg', 'Apa itu html?', '<p><strong>HyperText Markup Language</strong> adalah bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets dan bahasa skrip lainnya seperti JavaScript, VBScript, dan PHP.</p>\r\n', 1, 2, '2024-05-26');
 
 -- --------------------------------------------------------
 
@@ -125,13 +148,19 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `email`, `nama_user`, `password`, `role`) VALUES
 (1, 'admin@gmail.com', 'Admin Kel 13', '81dc9bdb52d04dc20036dbd8313ed055', 1),
-(2, 'tutor@gmail.com', 'Tutor Kel 13', '81dc9bdb52d04dc20036dbd8313ed055', 2),
-(3, 'd@gmail.com', 'Muhamad Khadaffy', '81dc9bdb52d04dc20036dbd8313ed055', 3),
-(4, 'm@gmail.com', 'Muhammad Aditya', '81dc9bdb52d04dc20036dbd8313ed055', 3);
+(2, 'd@gmail.com', 'Muhamad Khadaffy', '81dc9bdb52d04dc20036dbd8313ed055', 3),
+(3, 'm@gmail.com', 'Muhammad Aditya', '81dc9bdb52d04dc20036dbd8313ed055', 3),
+(4, 'tutor@gmail.com', 'Tutor Kel 13', '7426d5652f54759e70b8d4ed5dff7757', 2);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id_artikel`);
 
 --
 -- Indexes for table `jawaban`
@@ -171,6 +200,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jawaban`
