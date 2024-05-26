@@ -56,11 +56,11 @@
   <div class="container">
     <div class="row mt-3">
       <div class="col-md-6" data-aos-duration="1500" data-aos="fade-right">
-        <img src="<?= base_url('assets/') ?>dist/img/coding.png" style="border: 2px solid #7743DB; border-radius: 20px;" class="img-fluid" alt="" srcset="">
+        <img src="<?= base_url('assets/') ?>dist/img/coding.png" style="border: 2px solid #5548ed; border-radius: 20px;" class="img-fluid" alt="" srcset="">
       </div>
       <div class="col-md-6 my-auto" data-aos-duration="1500" data-aos="fade-left">
         <h1 class="title mt-3">Apa itu CodeChamp ?</h1>
-        <p class="text-section"><span style="font-size: 18px; color: #7743DB;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
+        <p class="text-section"><span style="font-size: 18px; color: #5548ed;">CodeChamp adalah Layanan Kursus Online Berbahasa Indonesia.</span><br>Materi kursus yang kami sediakan berfokuskan pada Web Development, jika anda berminat untuk mempelajari mengenai Web Development. Daftar sekarang juga secara gratis!</p>
         <a href="<?= base_url('auth/register') ?>"><button class="btn btn-daftar">Daftarkan akun sekarang juga!</button></a>
       </div>
     </div>
