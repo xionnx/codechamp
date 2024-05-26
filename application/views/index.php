@@ -6,7 +6,7 @@
         </h1>
         <p class="lead text-jumbotron" data-aos="fWde-right" data-aos-duration="1700">Layanan Kursus Online Berbahasa Indonesia</p>
         <a href="https://github.com/siubsi" target="_blank" title="Kunjungi GitHub SIUBSI"><i class="lni lni-github-original lni-custom-style" data-aos="fade-right" data-aos-duration="1700"></i></a>
-        <a href="<?= base_url('#creatorr'); ?>" title="Lihat Pembuat Forum"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
+        <a href="<?= base_url('#materikursus'); ?>" title="Lihat Pembuat Forum"><i class="fa fa-book fa-custom-style" style="margin-left: 10px;" data-aos="fade-right" data-aos-duration="1700"></i></a>
     </div>
 </div>
 <!-- end jumbotron -->
@@ -114,7 +114,7 @@
 </div>
 
 <!-- title -->
-<div class="row" id="creatorr">>
+<div class="row" id="materikursus">
     <div class="col-md-10 container mt-5">
         <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Materi Kursus Tersedia</h2>
     </div>

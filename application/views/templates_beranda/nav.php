@@ -63,7 +63,7 @@
                         <a class="nav-link">//</a>
                     </li>
                     <li class="nav-item">
-                        <a class="cta text-decoration-none" href="<?=base_url('auth/registrasi')?>">
+                        <a class="cta text-decoration-none" href="<?=base_url('auth/register')?>">
                             <span class="my-auto">
                                 <span class="font-daftar-masuk">Daftar Akun</span>
                             </span>
