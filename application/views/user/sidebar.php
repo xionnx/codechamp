@@ -20,8 +20,8 @@
         
 
         <!-- Menu Home -->
-        <li <?= $this->uri->segment(1) == 'home_user' ? 'class="active"' : ''?>>
-          <a href="<?php echo base_url('home_user');?>"><i class="fa fa-home"></i> 
+        <li <?= $this->uri->segment(1) == 'home' ? 'class="active"' : ''?>>
+          <a href="<?php echo base_url('home');?>"><i class="fa fa-home"></i> 
             <span>Home</span>
           </a>
         </li>
@@ -56,7 +56,7 @@
 
         <!-- Menu Data Peserta Kursus -->
         <li>
-          <a href="<?php echo base_url('logout');?>"><i class="fa fa-power-off"></i> 
+          <a href="<?php echo base_url('auth/logout');?>"><i class="fa fa-power-off"></i> 
             <span>Keluar Akun</span>
           </a>
         </li>

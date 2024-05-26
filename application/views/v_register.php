@@ -44,20 +44,28 @@
             </div><!-- /.login-logo -->
 
             <div class="text-center">
-                <p style="margin-bottom: 50px;">Silahkan masukkan email dan password yang sudah terdaftar agar dapat masuk ke halaman utama kursus.</p>
+                <p style="margin-bottom: 50px;">Silahkan masukkan email dan password yang sesuai syarat untuk membuat akun kursus.</p>
             </div>
-            <form action="<?php echo base_url('auth/login') ?>" method="post">
+            <form action="<?php echo base_url('auth/register') ?>" method="post">
                 <div class="form-group has-feedback">
                     <center><input type="email" class="form-control input-login" style="border-radius: 10px;" placeholder="Masukkan email" name="email">
                     <?= form_error('email', '<small class="text-danger">', '</small>'); ?></center>
                 </div>
                 <div class="form-group has-feedback">
+                    <center><input type="nama_user" class="form-control input-login" style="border-radius: 10px;" placeholder="Masukkan Nama Pengguna" name="nama_user">
+                    <?= form_error('nama_user', '<small class="text-danger">', '</small>'); ?></center>
+                </div>
+                <div class="form-group has-feedback">
                     <center><input type="password" class="form-control input-login" style="border-radius: 10px;" placeholder="Masukkan password" name="password">
                     <?= form_error('password', '<small class="text-danger">', '</small>'); ?></center>
                 </div>
+                <div class="form-group has-feedback">
+                    <center><input type="password" class="form-control input-login" style="border-radius: 10px;" placeholder="Masukkan ulang password" name="confirm_password">
+                    <?= form_error('confirm_password', '<small class="text-danger">', '</small>'); ?></center>
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <center><button type="submit" name="login" class="btn btn-success btn-login">Masuk</button></center>
+                        <center><button type="submit" name="login" class="btn btn-success btn-login">Daftar</button></center>
                     </div><!-- /.col -->
                 </div>
             </form>
@@ -67,8 +75,9 @@
 
             <div align="center">
 
-                    Baru di CodeChamp ?
-                    <a href="<?= base_url('auth/register'); ?>">Buat akun disini.</a>
+                    Sudah memiliki akun ?
+                    <a href="<?= base_url('auth/login'); ?>">Login disini.</a>
+                    <!-- <button class="btn btn-primary" type="submit" disabled>Register Menyusul</button></br> -->
                 </div>
                 <div align="center" style="margin-top: 5px;">
                     <a href="<?= base_url('beranda'); ?>">Kembali ke Halaman Beranda</a>

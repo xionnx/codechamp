@@ -3304,7 +3304,7 @@ table.text-center th {
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	width: 300px;
+	width: 350px;
 	height: 40px;
 }
 .btn-login {
@@ -3329,7 +3329,8 @@ table.text-center th {
 	padding: 20px;
 	border-top: 0;
 	color: #666;
-	border: 1px solid #333;
+	border: 1px solid #5548ed;
+	box-shadow: 5px 10px;
 	border-radius: 10px;
 }
 .login-box-body .form-control-feedback,

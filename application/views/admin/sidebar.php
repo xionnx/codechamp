@@ -25,7 +25,7 @@
 
 
         <!-- Dashboard ADMIN -->
-        <?php if ($this->session->userdata('status') == 'admin_login') { ?>
+        <?php if ($this->session->userdata('role') == 1) { ?>
 
 
           <li <?= $this->uri->segment(1) == 'tutor' ? 'class="active"' : '' ?>>
@@ -63,7 +63,7 @@
 
 
           <!-- Dashboard Tutor -->
-        <?php } else if ($this->session->userdata('status') == 'tutor_login') { ?>
+        <?php } else if ($this->session->userdata('role') == 2) { ?>
 
 
           <li class="treeview <?= $this->uri->segment(1) == 'soal' || $this->uri->segment(1) == 'soal_materi' ? 'active' : '' ?>">
@@ -83,7 +83,7 @@
         </li>
 
         <li>
-          <a href="<?php echo base_url('logout'); ?>"><i class="fa fa-power-off"></i>
+          <a href="<?php echo base_url('auth/logout'); ?>"><i class="fa fa-power-off"></i>
             <span>Keluar Akun</span>
           </a>
         </li>

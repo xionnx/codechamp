@@ -32,9 +32,9 @@ $this->load->view('admin/sidebar');
               </div>
               <div class="form-group">
               <div class="form-group">
-                <label class="col-sm-2 control-label">Username</label>
+                <label class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="username" value="<?= $a->username;?>" required>
+                  <input type="text" class="form-control" name="email" value="<?= $a->email;?>" required>
                 </div>
               </div>
               <div class="form-group">

@@ -6,8 +6,8 @@ class Ruang_hasil extends CI_Controller {
 	public function __construct() 
 	{
 		parent::__construct();
-		if ($this->session->userdata('status') !='user_login') {
-			redirect(base_url('auth'));
+		if ($this->session->userdata('role') != 3) {
+			redirect(base_url('home?peringatan=akses_ditolak'));
 		}
 	}
 

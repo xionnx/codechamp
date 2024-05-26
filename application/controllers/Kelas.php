@@ -8,8 +8,8 @@ class Kelas extends CI_Controller
 	{
 		parent::__construct();
 
-		if ($this->session->userdata('status') != 'admin_login') {
-			redirect(base_url('auth'));
+		if ($this->session->userdata('role') != 1) {
+			redirect(base_url('home?alert=akses_ditolak'));
 		}
 	}
 

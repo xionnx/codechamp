@@ -32,7 +32,6 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light nav-colour" id="nav">
         <div class="container">
-            <!-- <a class="navbar-brand text-white" href="<?=base_url('Auth')?>">SIUBSI.Play</a> -->
             <img src="<?= base_url('assets/'); ?>dist/img/codechamplogo2.png" class="navbar-brand" width="40" alt="">
             <script src="<?=base_url('assets/');?>dist/js/js_beranda/nav.js"></script>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -54,7 +53,7 @@
                         <a clas="nav-link">//</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('auth'); ?>" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="<?= base_url('auth/login'); ?>" aria-haspopup="true" aria-expanded="false">
                             Masuk
                         </a>
                     <li>

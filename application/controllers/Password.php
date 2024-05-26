@@ -7,10 +7,10 @@ class Password extends CI_Controller
 	{
 		parent::__construct();
 
-		if ($this->session->userdata('status') != 'admin_login') {
-			if ($this->session->userdata('status') != 'tutor_login') {
-				if ($this->session->userdata('status') != 'user_login') {
-					redirect(base_url('auth'));
+		if ($this->session->userdata('role') != 1) {
+			if ($this->session->userdata('role') != 2) {
+				if ($this->session->userdata('role') != 3) {
+					redirect(base_url('auth/login?alert=akses_ditolak'));
 				}
 			}
 		}
@@ -26,15 +26,15 @@ class Password extends CI_Controller
 		$this->form_validation->set_rules('password2', 'Password Ulang', 'required|trim|matches[password1]');
 
 		if ($this->form_validation->run() == false) {
-			if ($this->session->userdata('status') == 'admin_login') {
+			if ($this->session->userdata('role') == 1) {
 				$this->load->view('admin/v_password');
-			} else if ($this->session->userdata('status') == 'tutor_login') {
+			} else if ($this->session->userdata('role') == 2) {
 				$this->load->view('admin/v_password_tutor');
-			} else if ($this->session->userdata('status') == 'user_login') {
+			} else if ($this->session->userdata('role') == 3) {
 				$this->load->view('user/v_password');
 			} else 
 
-			if ($this->session->userdata('status') == 'admin_login') {
+			if ($this->session->userdata('role') == 1) {
 				$id = $this->session->userdata('id');
 				$where 	= array('id' => $id);
 				$data 	= array('password' => password_hash($baru, PASSWORD_BCRYPT));;
@@ -42,7 +42,7 @@ class Password extends CI_Controller
 				$this->m_data->update_data($where, $data, 'admin');
 				$this->session->set_flashdata('message', '<div class="alert alert-success alert-message"><i class="icon fa fa-check"></i><b>Sukses !<br></b> Password anda berhasil diganti</div>');
 				redirect(base_url('password'));
-			} else if ($this->session->userdata('status') == 'tutor_login') {
+			} else if ($this->session->userdata('role') == 2) {
 				$id = $this->session->userdata('id');
 				$where 	= array('id_tutor' => $id);
 				$data 	= array('password' => password_hash($baru, PASSWORD_BCRYPT));

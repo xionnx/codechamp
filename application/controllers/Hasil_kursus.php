@@ -6,8 +6,8 @@ class Hasil_kursus extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('status') != 'admin_login') {
-			redirect(base_url('auth'));
+		if ($this->session->userdata('role') != 1) {
+			redirect(base_url('home'));
 		}
 		$this->load->model('m_hasil');
 		$this->load->library('mypdf');

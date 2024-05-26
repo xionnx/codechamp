@@ -7,9 +7,9 @@ class Soal extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('status') != 'admin_login') {
-			if ($this->session->userdata('status') != 'tutor_login') {
-				redirect('auth');
+		if ($this->session->userdata('role') != 1) {
+			if ($this->session->userdata('role') != 2) {
+				redirect('home?peringatan=akses_ditolak');
 			}
 		}
 	}

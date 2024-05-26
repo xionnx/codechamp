@@ -37,7 +37,7 @@ $this->load->view('admin/sidebar');
                 <th width="1%">No</th>
                 <th>ID Pengguna</th>
                 <th>Nama Pengguna</th>
-                <th>Username</th>
+                <th>Email</th>
                 <th width="12%">Aksi</th>
               </tr>
             </thead>
@@ -49,7 +49,7 @@ $this->load->view('admin/sidebar');
                   <td><?php echo $no++; ?></td>
                   <td><?php echo $m->id_user; ?></td>
                   <td><?php echo $m->nama_user; ?></td>
-                  <td><?php echo $m->username; ?></td>
+                  <td><?php echo $m->email; ?></td>
                   <td>
                     <a href="<?= base_url('user/edit/') . $m->id_user; ?>" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-edit" title="Ubah Data"></span></a> |
                     <a href="<?= base_url('user/hapus/') . $m->id_user; ?>" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash" onclick="return confirm('Apakah yakin ingin menghapus user <?= $m->nama_user; ?>?')" title="Hapus"></span></a>
@@ -84,8 +84,8 @@ $this->load->view('admin/sidebar');
             <input type="text" class="form-control" name="nama_user" placeholder="Masukkan Nama Pengguna" required="">
           </div>
           <div class="form-group">
-            <label class="font-weight-bold">Username</label>
-            <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required="">
+            <label class="font-weight-bold">Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Masukkan Email" required="">
           </div>
           <div class="form-group">
             <label class="font-weight-bold">Password</label>

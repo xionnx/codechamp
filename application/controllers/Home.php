@@ -9,22 +9,20 @@ class Home extends CI_Controller
 	{
 		parent::__construct();
 
-		//cek session yang login, jika session status tidak sama dengan session admin_login,maka halaman akan di alihkan kembali ke halaman login.
-		if ($this->session->userdata('status') != 'admin_login') {
-			if ($this->session->userdata('status') != 'tutor_login') {
-				
-				redirect('auth');
-				
-			}
-		}
+		//cek session yang login, jika session role tidak sama dengan session role yang ditentukan, maka halaman akan di alihkan kembali ke halaman login.
+		// if ($this->session->userdata('role') != 1 || $this->session->userdata('role') != 2 || $this->session->userdata('role') != 3) {
+		// 	redirect('auth/login');
+		// }
 	}
 
 	public function index()
 	{
-		if ($this->session->userdata('status') == 'admin_login') {
+		if ($this->session->userdata('role') == 1) {
 			$this->load->view('admin/v_home');
-		}  else {
+		}  else if ($this->session->userdata('role') == 2) {
 			$this->load->view('admin/v_home_tutor');
+		} else {
+			$this->load->view('user/v_home');
 		}
 	}
 }

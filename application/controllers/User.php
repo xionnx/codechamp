@@ -8,8 +8,8 @@ class user extends CI_Controller
 	{
 
 		parent::__construct();
-		if ($this->session->userdata('status') != 'admin_login') {
-			redirect(base_url('auth'));
+		if ($this->session->userdata('role') != 1) {
+			redirect(base_url('home'));
 		}
 	}
 
@@ -22,18 +22,17 @@ class user extends CI_Controller
 	public function create()
 	{
 		$this->form_validation->set_rules('nama', 'Nama', 'required|trim', ['required' => 'Kolom nama tidak boleh kosong.']);
-		$this->form_validation->set_rules('kelas', 'Kelas', 'required|trim', ['required' => 'Kolom kelas tidak boleh kosong.']);
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[user.username]', ['required' => 'Kolom username tidak boleh kosong.']);
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|is_unique[user.email]', ['required' => 'Kolom email tidak boleh kosong.']);
 		$this->form_validation->set_rules('password', 'Password', 'required|trim', ['required' => 'Kolom password tidak boleh kosong.']);
 
 		$nama 		= htmlspecialchars($this->input->post('nama', TRUE));
-		$username	= htmlspecialchars($this->input->post('username', TRUE));
+		$email	= htmlspecialchars($this->input->post('email', TRUE));
 		$password	= htmlspecialchars($this->input->post('password', TRUE));
 
 		if ($this->form_validation->run() != false) {
 			$data = array(
 				'nama_user' => $nama,
-				'username' => $username,
+				'email' => $email,
 				'password' => $password,
 			);
 
@@ -57,7 +56,7 @@ class user extends CI_Controller
 	{
 		$id 		= $this->input->post('id');
 		$nama 		= $this->input->post('nama');
-		$username	= $this->input->post('username');
+		$email	= $this->input->post('email');
 		$password	= $this->input->post('password');
 
 		$where = array('id_user' => $id);
@@ -65,13 +64,13 @@ class user extends CI_Controller
 		if ($password == "") {
 			$data = array(
 				'nama_user' => $nama,
-				'username' => $username
+				'email' => $email
 			);
 			$this->m_data->update_data($where, $data, 'user');
 		} else {
 			$data = array(
 				'nama_user' => $nama,
-				'username' 	 => $username,
+				'email' 	 => $email,
 				'password' 	 => $password,
 			);
 			$this->m_data->update_data($where, $data, 'user');
@@ -93,12 +92,12 @@ class user extends CI_Controller
 	public function user_aksi()
 	{
 		$nama_user	= $this->input->post('nama_user');
-		$username	= $this->input->post('username');
+		$email	= $this->input->post('email');
 		$password	= $this->input->post('password');
 
 		$data = array(
 			'nama_user' => $nama_user,
-			'username' => $username,
+			'email' => $email,
 			'password' => $password,
 		);
 

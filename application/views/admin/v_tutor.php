@@ -34,7 +34,7 @@ $this->load->view('admin/sidebar');
                 <th width="1%">No</th>
                 <th>ID Tutor</th>
                 <th>Nama Tutor</th>
-                <th>Username</th>
+                <th>Email</th>
                 <th width="12%"></th>
               </tr>
             </thead>
@@ -46,7 +46,7 @@ $this->load->view('admin/sidebar');
                   <td><?php echo $no++; ?></td>
                   <td><?php echo $m->id_tutor; ?></td>
                   <td><?php echo $m->nama_tutor; ?></td>
-                  <td><?php echo $m->username; ?></td>
+                  <td><?php echo $m->email; ?></td>
                   <td>
                     <a href="<?= base_url('tutor/edit/') . $m->id_tutor; ?>" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-edit" title="Ubah Data"></span></a> |
                     <a href="<?= base_url('tutor/hapus/') . $m->id_tutor; ?>" class="btn btn-xs btn-danger">
@@ -87,8 +87,8 @@ $this->load->view('admin/sidebar');
             <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Tutor" required="">
           </div>
           <div class="form-group">
-            <label class="font-weight-bold">Username</label>
-            <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required="">
+            <label class="font-weight-bold">Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Masukkan Email" required="">
           </div>
           <div class="form-group">
             <label class="font-weight-bold">Password</label>

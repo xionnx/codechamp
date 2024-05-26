@@ -11,6 +11,17 @@ class M_data extends CI_Model
 		return $this->db->get($table);
 	}
 
+	// fungsi login
+	public function login($post)
+    {
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->where('email', $post['email']);
+        $this->db->where('password', md5($post['password']));
+        $query = $this->db->get();
+        return $query;
+    }
+
 	//fungsi untuk insert data ke database
 	public function insert_data($data, $table)
 	{

@@ -9,7 +9,7 @@ Class M_login extends CI_Model {
 	{
 	    $this->db->select('password');
 	    $this->db->from('admin');
-	    $this->db->where('username', $data['username']);
+	    $this->db->where('email', $data['email']);
 	    $this->db->limit(1);
 	    $query = $this->db->get();
 
