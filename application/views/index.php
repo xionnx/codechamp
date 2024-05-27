@@ -16,7 +16,7 @@
 <!-- title -->
 <div class="row" id="materikursus">
   <div class="col-md-10 container mt-5"><br><br>
-    <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Materi Kursus Tersedia</h2>
+    <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500" style="margin-bottom: 100px; margin-top: 100px;">Materi Kursus Tersedia</h2>
   </div>
 </div>
 <br>
@@ -47,7 +47,7 @@
 <!-- title -->
 <div class="row" id="tentang">
   <div class="col-md-10 container mt-5">
-    <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500">Mengenai CodeChamp</h2>
+    <h2 class="title text-center" data-aos="fade-down" data-aos-duration="1500" style="margin-top: 150px;">Mengenai CodeChamp</h2>
   </div>
 </div>
 <br>
