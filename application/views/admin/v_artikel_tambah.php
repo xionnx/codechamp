@@ -113,7 +113,7 @@ $this->load->view('admin/sidebar');
                             <div class="form-group">
                                 <label class="col-sm-2 control-label"></label>
                                 <div class="col-sm-10">
-                                <a href="<?=base_url('artikel')?>" class="btn btn-default btn-flat"><span class="fa fa-arrow-left"></span> Kembali</a>
+                                    <button type="button" class="btn btn-dark btn-flat" onclick="return history.go(-1)" title="Kembali ke halaman sebelumnya"><span class="fa fa-arrow-left"></span> Kembali</button>
                                     <button type="submit" class="btn btn-primary btn-flat" title="Tambah Data Artikel"><span class="fa fa-save"></span> Simpan</button>
                                 </div>
                             </div>

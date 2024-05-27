@@ -32,11 +32,10 @@ $this->load->view('kursus/topbar');
                                         <td width="1%"><?php echo $no; ?>.</td>
                                         <td><?php echo $s->pertanyaan; ?>
                                             <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_materi; ?>' />
-                                            A. <?php echo $s->a; ?><br>
-                                            B. <?php echo $s->b; ?><br>
-                                            C. <?php echo $s->c; ?><br>
-                                            D. <?php echo $s->d; ?><br>
-                                            E. <?php echo $s->e; ?><br>
+                                            A. <?php echo $s->jwb_a; ?><br>
+                                            B. <?php echo $s->jwb_b; ?><br>
+                                            C. <?php echo $s->jwb_c; ?><br>
+                                            D. <?php echo $s->jwb_d; ?><br>
                                             <p>Jawaban Benar : <?= $s->kunci_jawaban ?></p>
                                         </td>
                                     </tr>

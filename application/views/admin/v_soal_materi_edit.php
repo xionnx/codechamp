@@ -49,31 +49,25 @@ $this->load->view('admin/sidebar');
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Jawaban A</label>
                             <div class="col-sm-10">
-                                <textarea rows="2" style="width: 100%" name="a" required><?= $s->a;?></textarea>
+                                <textarea rows="2" style="width: 100%" name="a" required><?= $s->jwb_a;?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Jawaban B</label>
                             <div class="col-sm-10">
-                                <textarea rows="2" style="width: 100%" name="b" required><?= $s->b;?></textarea>
+                                <textarea rows="2" style="width: 100%" name="b" required><?= $s->jwb_b;?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Jawaban C</label>
                             <div class="col-sm-10">
-                                <textarea rows="2" style="width: 100%" name="c" required><?= $s->c;?></textarea>
+                                <textarea rows="2" style="width: 100%" name="c" required><?= $s->jwb_c;?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Jawaban D</label>
                             <div class="col-sm-10">
-                                <textarea rows="2" style="width: 100%" name="d" required><?= $s->d;?></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Jawaban E</label>
-                            <div class="col-sm-10">
-                                <textarea rows="2" style="width: 100%" name="e" required><?= $s->e;?></textarea>
+                                <textarea rows="2" style="width: 100%" name="d" required><?= $s->jwb_d;?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -84,7 +78,6 @@ $this->load->view('admin/sidebar');
                                     <option <?php if($s->kunci_jawaban=='B'){echo "selected='selected'";} ?>>B</option>
                                     <option <?php if($s->kunci_jawaban=='C'){echo "selected='selected'";} ?>>C</option>
                                     <option <?php if($s->kunci_jawaban=='D'){echo "selected='selected'";} ?>>D</option>
-                                    <option <?php if($s->kunci_jawaban=='E'){echo "selected='selected'";} ?>>E</option>
                                 </select>
                             </div>
                         </div>

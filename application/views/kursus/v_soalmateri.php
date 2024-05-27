@@ -33,11 +33,10 @@ $this->load->view('kursus/topbar');
                                         <td width="1%"><?php echo $no; ?>.</td>
                                         <td><?php echo $s->pertanyaan; ?>
                                             <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_materi; ?>' />
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="A" required /> <?php echo $s->a; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="B" required /> <?php echo $s->b; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="C" required /> <?php echo $s->c; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="D" required /> <?php echo $s->d; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="E" required /> <?php echo $s->e; ?>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="A" required /> <?php echo $s->jwb_a; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="B" required /> <?php echo $s->jwb_b; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="C" required /> <?php echo $s->jwb_c; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_materi; ?>]" value="D" required /> <?php echo $s->jwb_d; ?><br>
                                         </td>
                                     </tr>
                                 </tbody>

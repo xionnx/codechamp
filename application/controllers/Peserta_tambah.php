@@ -13,7 +13,7 @@ class peserta_tambah extends CI_Controller
 
 	public function index()
 	{
-		$data['user'] = $this->db->query('SELECT * from user')->result();
+		$data['user'] = $this->db->query('SELECT * from user WHERE user.role != 1 AND user.role != 2;')->result();
 		$data['materi'] = $this->db->query('SELECT * from materi')->result();
 
 		$this->load->view('admin/v_peserta_tambah',$data);

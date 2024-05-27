@@ -85,48 +85,38 @@ $this->load->view('admin/sidebar');
                                             <li>
                                                 <?php if ('A'== $d->kunci_jawaban) {
                                                     echo "<b>";
-                                                    echo $d->a;
+                                                    echo $d->jwb_a;
                                                     echo "</b>";
                                                 } else {
-                                                    echo $d->a;
+                                                    echo $d->jwb_a;
                                                 }?>
                                             </li>
                                             <li>
                                                 <?php if ('B'== $d->kunci_jawaban) {
                                                     echo "<b>";
-                                                    echo $d->b;
+                                                    echo $d->jwb_b;
                                                     echo "</b>";
                                                 } else {
-                                                    echo $d->b;
+                                                    echo $d->jwb_b;
                                                 }?>
                                             </li>
                                             <li>
                                                 <?php if ('C'== $d->kunci_jawaban) {
                                                     echo "<b>";
-                                                    echo $d->c;
+                                                    echo $d->jwb_c;
                                                     echo "</b>";
                                                 } else {
-                                                    echo $d->c;
+                                                    echo $d->jwb_c;
                                                 }
                                                  ?>    
                                             </li>
                                             <li>
                                                 <?php if ('D'== $d->kunci_jawaban) {
                                                     echo "<b>";
-                                                    echo $d->d;
+                                                    echo $d->jwb_d;
                                                     echo "</b>";
                                                 } else {
-                                                    echo $d->d;
-                                                }
-                                                 ?>    
-                                            </li>
-                                            <li>
-                                                <?php if ('E'== $d->kunci_jawaban) {
-                                                    echo "<b>";
-                                                    echo $d->e;
-                                                    echo "</b>";
-                                                } else {
-                                                    echo $d->e;
+                                                    echo $d->jwb_d;
                                                 }
                                                  ?>    
                                             </li>
