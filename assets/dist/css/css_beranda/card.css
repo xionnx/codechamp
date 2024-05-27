@@ -16,11 +16,17 @@
 		min-height: 350px;
 	}
 }
-@media (max-width: 420px) {
+@media (max-width: 650px) {
 	.card {
-		min-height: 300px;
+		min-height: 250px;
 	}
 }
+@media (min-width: 420px) {
+	.card {
+		min-height: 500px;
+	}
+}
+
 .card.card-has-bg {
 	transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 	background-size: 120%;

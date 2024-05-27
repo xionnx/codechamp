@@ -490,7 +490,9 @@ path.two {
 /* Customization */
 .nav-link-edited {
 	background-color: #5548ed;
-	color: white;
+	color: red;
+	margin-top: 2px;
+	margin-left: 2px;
 }
 
 .nav-link-edited:hover {
