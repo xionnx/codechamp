@@ -36,20 +36,6 @@ $this->load->view('admin/sidebar');
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Tanggal Kursus</label>
-                      <div class="col-sm-10">
-                          <div class="input-group date">
-                              <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control pull-right" id="date" name="tanggal" placeholder="2019-12-30" autocomplete="off" required="">
-                          </div>
-                      </div>
-                    </div>
-
-                    
-                    
                   </div>
                   <!-- /.box-body -->
                   

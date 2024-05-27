@@ -87,9 +87,9 @@ class M_data extends CI_Model
 		$count = $this->input->post('id');
 		foreach ($count as $i => $value) {
 			$entri[] = array(
-				'id_user' 	=> $this->input->post('id')[$i],
-				'id_materi' => $this->input->post('materi'),
-				'status_kursus' 	=> 1
+				'id_user' 					=> $this->input->post('id')[$i],
+				'id_materi' 				=> $this->input->post('materi'),
+				'status_kursus_selesai' 	=> 1
 
 			);
 		}
@@ -124,6 +124,12 @@ class M_data extends CI_Model
 
 		$this->db->insert_batch('jawaban', $entri);
 		return true;
+	}
+
+	public function insert_exp($table, $data)
+	{
+		$this->db->where('user', $table);
+		$this->db->update('exp', $data);
 	}
 
 	public function UpdateSkor($id_jawaban, $data)

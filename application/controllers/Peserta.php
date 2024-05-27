@@ -76,7 +76,7 @@ class peserta extends CI_Controller
 			$data = array(
 				'id_user'	=> $peserta,
 				'id_materi'		=> $materi,
-				'status_kursus'	=> 1
+				'status_kursus_selesai'	=> 1
 				
 			);
 

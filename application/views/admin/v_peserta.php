@@ -60,9 +60,9 @@ $this->load->view('admin/sidebar');
                                         
                                     </td>
                                     <td>
-                                        <?php if ($d->status_kursus == "1") {
+                                        <?php if ($d->status_kursus_selesai == "1") {
                                                 echo "<span class='btn btn-xs btn-default'> Belum Dikerjakan </span>";
-                                            } else if ($d->status_kursus == "2") {
+                                            } else if ($d->status_kursus_selesai == "2") {
                                                 echo "<span class='btn btn-xs btn-success'> Sudah Dikerjakan </span>";
                                             }
                                             ?>

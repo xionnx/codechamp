@@ -44,13 +44,13 @@ date_default_timezone_set('Asia/Jakarta');
                                     <td><?php echo $d->kode_materi; ?></td>
                                     <td><?php echo $d->nama_materi; ?></td>
                                     <td>
-                                        <?php if ($d->status_kursus == 0) {
+                                        <?php if ($d->status_kursus_selesai == 0) {
                                                 echo "<span> Belum Dimulai </span>";
-                                            } else if ($d->status_kursus == 2) {
+                                            } else if ($d->status_kursus_selesai == 2) {
                                                 // echo "<span> Sudah Mengikuti Kursus </span>";
                                                 echo "<a href='" . 'ruang_kursus/lihatkursusselesai/' . "$d->id_peserta' class='btn btn-xs btn-success';'>Lihat Hasil</a>";
-                                            } else if ($d->status_kursus == 1) {
-                                                if ($d->status_kursus == 1) {
+                                            } else if ($d->status_kursus_selesai == 1) {
+                                                if ($d->status_kursus_selesai == 1) {
                                                     echo "<a href='" . 'ruang_kursus/soal/' . "$d->id_peserta' class='btn btn-xs btn-success';'>Mulai Mengerjakan</a>";
                                                 }
                                             }
