@@ -21,7 +21,7 @@ $this->load->view('admin/sidebar');
             <?php foreach ($soal as $s) { ?>
                 <!-- TUTUP Tampilan untuk alert -->
                 <div class="box box-success" style="overflow-x: scroll;">
-                    <form action="<?= base_url('soal_materi/update'); ?>" method="post">
+                    <form action="<?= base_url('soal_materi/update'); ?>" method="post" enctype="multipart/form-data">
                         <div class="box-header">
                             <center>
                                 <h4 class="box-title">Edit Data Soal Materi</h4>
