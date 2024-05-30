@@ -26,10 +26,10 @@ class artikel extends CI_Controller
 
 	}
 
-	public function info()
+	public function info($id)
 	{
 
-		$data['artikel'] = $this->m_data->get_join_artikels()->result();
+		$data['artikel'] = $this->m_data->get_join_artikel($id)->result();
 
 		$this->load->view('templates_beranda/navartikel');
 		$this->load->view('admin/v_artikel_info', $data);
