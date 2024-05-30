@@ -14,7 +14,7 @@ date_default_timezone_set('Asia/Jakarta');
 <section class="content">
     <div class="row">
         <div class="col-md-12">
-          
+
 
             <!-- Default box -->
             <div class="box box-success box-solid">
@@ -31,7 +31,7 @@ date_default_timezone_set('Asia/Jakarta');
                                 <th>Kode Materi</th>
                                 <th>Nama Materi</th>
                                 <th width="10%">Aksi</th>
-                               
+
                             </tr>
 
                         </thead>
@@ -45,19 +45,19 @@ date_default_timezone_set('Asia/Jakarta');
                                     <td><?php echo $d->nama_materi; ?></td>
                                     <td>
                                         <?php if ($d->status_kursus_selesai == 0) {
-                                                echo "<span> Belum Dimulai </span>";
-                                            } else if ($d->status_kursus_selesai == 2) {
-                                                // echo "<span> Sudah Mengikuti Kursus </span>";
-                                                echo "<a href='" . 'ruang_kursus/lihatkursusselesai/' . "$d->id_peserta' class='btn btn-xs btn-success';'>Lihat Hasil</a>";
-                                            } else if ($d->status_kursus_selesai == 1) {
-                                                if ($d->status_kursus_selesai == 1) {
-                                                    echo "<a href='" . 'ruang_kursus/soal/' . "$d->id_peserta' class='btn btn-xs btn-success';'>Mulai Mengerjakan</a>";
-                                                }
+                                            echo "<span> Belum Dimulai </span>";
+                                        } else if ($d->status_kursus_selesai == 2) {
+                                            // echo "<span> Sudah Mengikuti Kursus </span>";
+                                            echo "<a href='" . 'ruang_kursus/lihatkursusselesai/' . "$d->id_peserta' class='btn btn-xs btn-success';'>Lihat Hasil</a>";
+                                        } else if ($d->status_kursus_selesai == 1) {
+                                            if ($d->status_kursus_selesai == 1) {
+                                                echo "<a href='" . 'ruang_kursus/soal/' . "$d->id_peserta' class='btn btn-xs btn-success';'>Mulai Mengerjakan</a>";
                                             }
-                                            ?>
+                                        }
+                                        ?>
 
                                     </td>
-                                   
+
                                 </tr>
                             <?php } ?>
                         </tbody>
@@ -74,6 +74,10 @@ $this->load->view('user/js');
 ?>
 <!--tambahkan custom js disini-->
 <script type="text/javascript">
+    $(function() {
+        $('#data').dataTable();
+    });
+
     $('.alert-message').alert().delay(3000).slideUp('slow');
 </script>
 
