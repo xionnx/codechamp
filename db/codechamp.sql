@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2024 at 08:03 PM
+-- Generation Time: May 30, 2024 at 12:34 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 7.3.33
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `artikel` (
   `isi_artikel` text NOT NULL,
   `id_materi` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `tanggal_unggah` date NOT NULL
+  `tanggal_unggah` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -42,7 +42,8 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `gambar_artikel`, `judul_artikel`, `isi_artikel`, `id_materi`, `id_user`, `tanggal_unggah`) VALUES
-(1, 'artikel_1716737279.jpg', 'Apa itu html?', '<p><strong>HyperText Markup Language</strong> adalah bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets dan bahasa skrip lainnya seperti JavaScript, VBScript, dan PHP.</p>\r\n', 1, 2, '2024-05-26');
+(1, 'artikel_1716737279.jpg', 'Apa itu html ?', '<p><strong>HyperText Markup Language</strong> adalah bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets dan bahasa skrip lainnya seperti JavaScript, VBScript, dan PHPs.</p>\r\n', 1, 2, '2024-05-26'),
+(2, 'artikel_1717062577.png', 'Apa itu Git ?', '<p>Git adalah version control system yang populer dan banyak digunakan oleh para developer atau programmer untuk berkolaborasi dalam pembuatan kode perangkat lunak. Dengan demikian, tim dapat melacak dan mengelola perubahan yang dilakukan pada source code secara efisien dan terorganisir. Tool ini diciptakan oleh Linus Torvalds, orang yang juga mengembangkan kernel Linux.</p>', 2, 4, '2024-05-30');
 
 -- --------------------------------------------------------
 
@@ -76,9 +77,9 @@ CREATE TABLE `materi` (
 
 INSERT INTO `materi` (`id_materi`, `kode_materi`, `nama_materi`) VALUES
 (1, '001', 'HTML'),
-(2, '002', 'PHP'),
-(3, '003', 'Git'),
-(4, '004', 'Javascript');
+(2, '002', 'Git'),
+(3, '003', 'Javascript'),
+(4, '004', 'PHP');
 
 -- --------------------------------------------------------
 
@@ -90,8 +91,7 @@ CREATE TABLE `peserta` (
   `id_peserta` int(11) NOT NULL,
   `id_materi` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `status_kursus` tinyint(1) NOT NULL,
-  `status_kursus_kursus` int(11) NOT NULL,
+  `status_kursus_selesai` int(1) NOT NULL,
   `benar` varchar(20) NOT NULL,
   `salah` varchar(20) NOT NULL,
   `skor` varchar(10) NOT NULL
@@ -106,27 +106,26 @@ CREATE TABLE `peserta` (
 CREATE TABLE `soal_materi` (
   `id_soal_materi` int(11) NOT NULL,
   `id_materi` int(11) NOT NULL,
-  `pertanyaan` text NOT NULL,
-  `a` text NOT NULL,
-  `b` text NOT NULL,
-  `c` text NOT NULL,
-  `d` text NOT NULL,
-  `e` text NOT NULL,
-  `kunci_jawaban` varchar(2) NOT NULL
+  `pertanyaan` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `jwb_a` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `jwb_b` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `jwb_c` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `jwb_d` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `kunci_jawaban` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `soal_materi`
 --
 
-INSERT INTO `soal_materi` (`id_soal_materi`, `id_materi`, `pertanyaan`, `a`, `b`, `c`, `d`, `e`, `kunci_jawaban`) VALUES
-(2, 1, '<p>Tag HTML mana yang digunakan untuk membuat paragraf?</p>\r\n', 'Tag p', 'Tag h1', 'Tag br', 'Tag div', 'Semua Benar', 'A'),
-(3, 1, '<p>Apa kepanjangan dari HTML?</p>\r\n', 'HyperText Markup Language', 'HighText Machine Language', 'Ringan tangan', 'HyperText and Links Markup Language', 'HyperTool Markup Language', 'A'),
-(19, 1, '<p>Tag HTML mana yang digunakan untuk menampilkan gambar?</p>\r\n', 'Tag img', 'Tag picture', 'Tag image', 'Tag graphic', 'Semua Benar', 'A'),
-(20, 1, '<p>Atribut HTML mana yang digunakan untuk menentukan URL dari gambar dalam tag <code>&lt;img&gt;</code>?</p>\r\n', 'href', 'src', 'link', 'url', 'Semua Benar', 'B'),
-(21, 1, '<p>Tag HTML mana yang digunakan untuk membuat hyperlink?</p>\r\n', 'Tag a', 'Tag link', 'Tag href', 'Tag nav', 'Semua Benar', 'A'),
-(22, 3, '<p>Apa itu Git?</p>\r\n', 'Sebuah bahasa pemrograman', 'Sistem manajemen basis data', 'Sistem kontrol versi terdistribusi', 'Sebuah framework untuk pengembangan web', 'Semua Benar', 'C'),
-(23, 3, '<p>Perintah apa yang digunakan untuk membuat repositori baru di Git?</p>\r\n', 'git create', 'git init', 'git start', 'git new', 'Semua Benar', 'B');
+INSERT INTO `soal_materi` (`id_soal_materi`, `id_materi`, `pertanyaan`, `jwb_a`, `jwb_b`, `jwb_c`, `jwb_d`, `kunci_jawaban`) VALUES
+(1, 1, '<p>Tag HTML mana yang digunakan untuk membuat paragraf?</p>\r\n', 'Tag p', 'Tag h1', 'Tag br', 'Tag div', 'A'),
+(2, 1, '<p>Apa kepanjangan dari HTML?</p>\r\n', 'HyperText Markup Language', '\0HighText Machine Language', 'Ringan tangan', 'HyperText and Links Markup Language', 'A'),
+(3, 1, '<p>Tag HTML mana yang digunakan untuk menampilkan gambar?</p>\r\n', 'Tag img', '\0Tag picture', 'Tag image', 'Tag graphic', 'A'),
+(4, 1, '<p>Atribut HTML mana yang digunakan untuk menentukan URL dari gambar dalam tag <code>&lt;img&gt;</code>?</p>\r\n', 'href', '\0src', 'link', 'url', 'B'),
+(5, 1, '<p>Tag HTML mana yang digunakan untuk membuat hyperlink?</p>\r\n', 'Tag a', 'Tag link', 'Tag href', 'Tag nav', 'A'),
+(6, 2, '<p>Apa itu Git?</p>\r\n', 'Sebuah bahasa pemrograman', 'Sistem manajemen basis data', 'Sistem kontrol versi terdistribusi', 'Sebuah framework untuk pengembangan web', 'C'),
+(7, 2, '<p>Perintah apa yang digunakan untuk membuat repositori baru di Git?</p>\r\n', 'git create', 'git init', 'git start', 'git new', 'B');
 
 -- --------------------------------------------------------
 
@@ -150,7 +149,7 @@ INSERT INTO `user` (`id_user`, `email`, `nama_user`, `password`, `role`) VALUES
 (1, 'admin@gmail.com', 'Admin Kel 13', '81dc9bdb52d04dc20036dbd8313ed055', 1),
 (2, 'd@gmail.com', 'Muhamad Khadaffy', '81dc9bdb52d04dc20036dbd8313ed055', 3),
 (3, 'm@gmail.com', 'Muhammad Aditya', '81dc9bdb52d04dc20036dbd8313ed055', 3),
-(4, 'tutor@gmail.com', 'Tutor Kel 13', '7426d5652f54759e70b8d4ed5dff7757', 2);
+(4, 'tutor@gmail.com', 'Tutor Kel 13', '81dc9bdb52d04dc20036dbd8313ed055', 2);
 
 --
 -- Indexes for dumped tables
@@ -205,7 +204,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `jawaban`
