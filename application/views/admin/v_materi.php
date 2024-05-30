@@ -1,4 +1,4 @@
-<?php 
+<?php
 $this->load->view('admin/head');
 ?>
 <!--tambahkan custom css disini-->
@@ -12,56 +12,51 @@ $this->load->view('admin/sidebar');
 
 <!-- Main content -->
 <section class="content">
-<div class="row">
+  <div class="row">
     <div class="col-md-12">
       <?= $this->session->flashdata('message'); ?>
-        <!-- Default box -->
-        <div class="box box-success" style="overflow-x: scroll;">
-            <div class="box-header">
-                <center><h3 class="box-title">Data Materi</h3></center><p>
-                  <a href="<?=base_url('soal_materi')?>" class="btn btn-default btn-flat"><span class="fa fa-arrow-left"></span> Kembali</a>
-                <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#modal-default"><span class="fa fa-plus"></span> Tambah</button>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-                <table id="data" class="table table-bordered table-striped">                    
-                    <thead>
-                        <tr>
-                            <th width="1%">No</th>
-                            <th>Kode</th>
-                            <th>Nama Materi</th>                          
-                            <th width="12%"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $no=1;
-                        foreach($materi as $m) { ?>
-                            <tr>
-                                <td><?php echo $no++; ?></td>
-                                <td><?php echo $m->kode_materi; ?></td>
-                                <td><?php echo $m->nama_materi; ?></td>
-                                <td>
-                                  <div class="btn-group">
-                                    <button type="button" class="btn btn-primary btn-flat btn-xs">Action</button>
-                                    <button type="button" class="btn btn-primary btn-xs btn-flat dropdown-toggle" data-toggle="dropdown">
-                                      <span class="caret"></span>
-                                      <span class="sr-only">Toggle Dropdown</span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                      <li><a href="<?= base_url().'materi/edit/'.$m->id_materi; ?>">Edit Data</a></li>
-                                      <li><a href="<?= base_url().'materi/hapus/'.$m->id_materi; ?>" onclick="return confirm('Apakah yakin data peserta ini di hapus?')">Hapus Data</a></li>
-                                    </ul>
-                                  </div>
-                                </td>
-                            </tr>
-                        <?php } ?>                  
-                    </tbody>                
-                </table>
-            </div>
+      <!-- Default box -->
+      <div class="box box-success" style="overflow-x: scroll;">
+        <div class="box-header">
+          <center>
+            <h3 class="box-title">Data Materi</h3>
+          </center>
+          <p>
+            <a href="<?= base_url('soal_materi') ?>" class="btn btn-default"><span class="fa fa-arrow-left"></span> Kembali</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><span class="fa fa-plus"></span> Tambah</button>
         </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <table id="data" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th width="1%">No</th>
+                <th>Kode</th>
+                <th>Nama Materi</th>
+                <th width="12%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $no = 1;
+              foreach ($materi as $m) { ?>
+                <tr>
+                  <td><?php echo $no++; ?></td>
+                  <td><?php echo $m->kode_materi; ?></td>
+                  <td><?php echo $m->nama_materi; ?></td>
+                  <td>
+                    <a href="<?= base_url() . 'materi/edit/' . $m->id_materi; ?>" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-edit" title="Ubah"></span></a> |
+                    <a href="<?= base_url() . 'materi/hapus/' . $m->id_materi; ?>" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash" onclick="return confirm('Apakah yakin ingin menghapus data materi dengan nama <?= $m->nama_materi; ?> ?')" title="Hapus"></span></a>
+                  </td>
+                </tr>
+              <?php } ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <?= $this->session->unset_userdata('message') ?>
     </div>
-</div>
+  </div>
 </section><!-- /.content -->
 
 <!-- /. modal  -->
@@ -72,10 +67,12 @@ $this->load->view('admin/sidebar');
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-       <center> <h4 class="modal-title">Tambah Data Materi</h4></center>
+        <center>
+          <h4 class="modal-title">Tambah Data Materi</h4>
+        </center>
       </div>
       <!-- /.form dengan modal -->
-      <form method="post" action="<?php echo base_url().'materi/materi_aksi'; ?>">
+      <form method="post" action="<?php echo base_url() . 'materi/materi_aksi'; ?>">
         <div class="modal-body">
           <div class="form-group">
             <label class="font-weight-bold">Kode Materi </label>
@@ -87,7 +84,7 @@ $this->load->view('admin/sidebar');
           </div>
         </div>
         <div class="modal-footer">
-         
+
           <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
       </form>
@@ -99,20 +96,17 @@ $this->load->view('admin/sidebar');
 </div>
 <!-- /.modal -->
 
-<?php 
+<?php
 $this->load->view('admin/js');
 ?>
 <!--tambahkan custom js disini-->
 
 <script type="text/javascript">
+  $(document).ready(function() {
+    $('#data').dataTable();
+  });
 
-    $(document).ready(function() {
-        $('#data').dataTable();
-    });
-
-    $('.alert-message').alert().delay(3000).slideUp('slow');
-
-
+  $('.alert-message').alert().delay(3000).slideUp('slow');
 </script>
 
 <?php

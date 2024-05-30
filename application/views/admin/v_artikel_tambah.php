@@ -15,50 +15,54 @@ $this->load->view('admin/sidebar');
 <section class="content">
     <div class="row">
         <div class="col-md-12">
-            
+
             <?= $this->session->flashdata('message'); ?>
 
             <div class="box box-success" style="overflow-x: scroll;">
-              <div class="box-header">
-                
+                <div class="box-header">
 
 
-                <!-- /. modal  -->
-                <div class="modal fade" id="modal-default">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                        <center><h4 class="modal-title">Tambah Materi</h4></center>
-                      </div>
-                      <!-- /.form dengan modal -->
-                      <form method="post" action="<?php echo base_url().'materi/materi_aksi'; ?>">
-                        <div class="modal-body">
-                          <div class="form-group">
-                            <label class="font-weight-bold">Kode Materi </label>
-                            <input type="text" class="form-control" name="kode" placeholder="Masukkan Kode Materi" required="">
-                          </div>
-                          <div class="form-group">
-                            <label class="font-weight-bold">Nama Materi</label>
-                            <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Materi" required="">
-                          </div>
+
+                    <!-- /. modal  -->
+                    <div class="modal fade" id="modal-default">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <center>
+                                        <h4 class="modal-title">Tambah Materi</h4>
+                                    </center>
+                                </div>
+                                <!-- /.form dengan modal -->
+                                <form method="post" action="<?php echo base_url() . 'materi/materi_aksi'; ?>">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="font-weight-bold">Kode Materi </label>
+                                            <input type="text" class="form-control" name="kode" placeholder="Masukkan Kode Materi" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="font-weight-bold">Nama Materi</label>
+                                            <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Materi" required="">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                                </form>
+                                <!-- /.tutup form dengan modal  -->
+                            </div>
+                            <!-- /.modal-content -->
                         </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-                          <button type="submit" class="btn btn-primary">Simpan</button>
-                        </div>
-                      </form>
-                      <!-- /.tutup form dengan modal  -->
+                        <!-- /.modal-dialog -->
                     </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
+                    <!-- /.modal -->
 
-                <center><div class="box-title">Tambah Artikel</div></center>
+                    <center>
+                        <div class="box-title">Tambah Artikel</div>
+                    </center>
 
                 </div><!-- /.box-header -->
                 <form action="<?= base_url('artikel/tambah_artikel'); ?>" method="post" enctype="multipart/form-data">
@@ -84,7 +88,7 @@ $this->load->view('admin/sidebar');
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Pengunggah</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="id" value="<?= $this->session->userdata('nama'); ?>" disabled></input>
+                                    <input type="text" value="<?= $this->session->userdata('nama'); ?>" disabled readonly></input>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -96,7 +100,7 @@ $this->load->view('admin/sidebar');
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Tulis Isi Artikel</label>
                                 <div class="col-sm-9">
-                                    <textarea  class="soal" name="isi_artikel" required></textarea>
+                                    <textarea name="isi_artikel" class="soal" required></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -106,7 +110,7 @@ $this->load->view('admin/sidebar');
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" id="date" name="tanggal_unggah" placeholder="2024-12-04" autocomplete="off" required="">
+                                        <input type="text" class="form-control pull-right" id="date" name="tanggal_unggah" placeholder="2024-05-30" autocomplete="off" required>
                                     </div>
                                 </div>
                             </div>
